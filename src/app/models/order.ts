@@ -37,11 +37,11 @@ export class Order {
   @prop({ required: true })
   public id!: string;
 
-  @Field({ description: 'The LemonadeMarketplace contract address.' })
+  @Field({ description: 'The DaochatMarketplace contract address.' })
   @prop({ required: true })
   public contract!: string;
 
-  @Field({ description: 'The LemonadeMarketplace order ID.' })
+  @Field({ description: 'The DaochatMarketplace order ID.' })
   @prop({ required: true })
   public orderId!: string;
 
