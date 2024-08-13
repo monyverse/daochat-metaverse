@@ -14,4 +14,4 @@ export const wertPrivateKey = env.get('WERT_PRIVATE_KEY').asString();
 export const wertPublicKeyId = env.get('WERT_PUBLIC_KEY_ID').asString();
 
 export const isProduction = environment === 'production';
-export const webUrl = isProduction ? 'https://lemonade.social/' : 'https://staging.lemonade.social/';
+export const webUrl = isProduction ? 'https://daochat.social/' : 'https://staging.daochat.social/';
