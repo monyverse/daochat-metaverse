@@ -1,5 +1,6 @@
 {
     "configurations": [
+
         {
             "name": "Cloud Run: Run/Debug Locally",
             "type": "cloudcode.cloudrun",
@@ -9,13 +10,13 @@
                     "path": "Dockerfile"
                 }
             },
-            "image": "daochat-metaverse",
+            "image": "daochat",
             "service": {
-                "name": "daochat-metaverse",
-                "containerPort": 8080,
+                "name": "daochat",
+                "containerPort": 8880,
                 "resources": {
                     "limits": {
-                        "memory": "256Mi"
+                        "memory": "5006Mi"
                     }
                 }
             },
