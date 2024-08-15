@@ -1,4 +1,4 @@
-# Daochat Metaverse
+# DaoChat Metaverse
 
 This repository contains the Lemonade Metaverse backend that drives the no. 1 creator marketplace in the metaverse.
 
