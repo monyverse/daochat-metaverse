@@ -1,0 +1,44 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: DaochatMarketplace
+    network: arbitrum-sepolia
+    source:
+      address: "0xa5863C3a34Ea7b3929b1F1FfBCF32685EDCB9d07"
+      abi: DaochatMarketplace
+      startBlock: 71981791
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - OrderBid
+        - OrderCancelled
+        - OrderCreated
+        - OrderFilled
+        - RoleAdminChanged
+        - RoleGranted
+        - RoleRevoked
+      abis:
+        - name: DaochatMarketplace
+          file: ./abis/DaochatMarketplace.json
+      eventHandlers:
+        - event: OrderBid(indexed uint256,indexed address,uint256)
+          handler: handleOrderBid
+        - event: OrderCancelled(indexed uint256)
+          handler: handleOrderCancelled
+        - event: OrderCreated(indexed uint256,uint8,uint256,uint256,indexed address,address,uint256,address,uint256)
+          handler: handleOrderCreated
+        - event: OrderFilled(indexed uint256,indexed address,uint256)
+          handler: handleOrderFilled
+        - event: RoleAdminChanged(indexed bytes32,indexed bytes32,indexed bytes32)
+          handler: handleRoleAdminChanged
+        - event: RoleGranted(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleGranted
+        - event: RoleRevoked(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleRevoked
+      file: ./src/daochat-marketplace.ts
