@@ -4,7 +4,7 @@ import * as assert from 'assert';
 
 import type { Context } from '../types';
 
-import { OrderDirection, Token_orderBy } from '../../lib/lemonade-marketplace/types.generated';
+import { OrderDirection, Token_orderBy } from '../../lib/daochat-marketplace/types.generated';
 import { PaginationArgs } from '../types/pagination';
 import { TokenDetail, TokenSort, TokenComplex, TokenWhereComplex } from '../types/token';
 import { TokenModel } from '../../app/models/token';

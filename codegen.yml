@@ -1,21 +1,21 @@
 overwrite: true
-schema: ${INDEXER_URL:https://api.thegraph.com/subgraphs/name/lemonadesocial/lemonade-marketplace-matic}
+schema: ${INDEXER_URL:https://api.studio.thegraph.com/proxy/63193/daochat-marketplace/v.0.02/}
 config:
   defaultScalarType: unknown
   scalars:
     BigInt: string
     Bytes: string
 generates:
-  src/lib/lemonade-marketplace/documents.generated.ts:
+  src/lib/daochat-marketplace/documents.generated.ts:
     documents:
-      - src/lib/lemonade-marketplace/schema.graphql
+      - src/lib/daochat-marketplace/schema.graphql
     plugins:
       - typescript-document-nodes
     config:
       namingConvention: keep
-  src/lib/lemonade-marketplace/types.generated.ts:
+  src/lib/daochat-marketplace/types.generated.ts:
     documents:
-      - src/lib/lemonade-marketplace/schema.graphql
+      - src/lib/daochat-marketplace/schema.graphql
     plugins:
       - typescript
       - typescript-operations

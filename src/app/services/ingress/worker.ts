@@ -19,8 +19,8 @@ import { getParsedUrl, getWebUrl } from '../../utils/url';
 import { getRandomInt } from '../../utils/math';
 import * as enrichQueue from '../enrich/queue';
 
-import { Ingress } from '../../../lib/lemonade-marketplace/documents.generated';
-import type { Block_height, IngressQuery, IngressQueryVariables, Order_filter, Token_filter } from '../../../lib/lemonade-marketplace/types.generated';
+import { Ingress } from '../../../lib/daochat-marketplace/documents.generated';
+import type { Block_height, IngressQuery, IngressQueryVariables, Order_filter, Token_filter } from '../../../lib/daochat-marketplace/types.generated';
 
 const POLL_BACKOFF_BASE = 100;
 const POLL_BACKOFF_CAP = 30000;

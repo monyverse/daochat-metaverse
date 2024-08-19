@@ -12,8 +12,8 @@ import { excludeNull } from '../utils/object';
 import { getDate } from '../utils/date';
 import { getOrSet } from '../helpers/redis';
 
-import { GetToken, GetTokens } from '../../lib/lemonade-marketplace/documents.generated';
-import { GetTokenQuery, GetTokenQueryVariables, GetTokensQuery, GetTokensQueryVariables, Token as GeneratedToken } from '../../lib/lemonade-marketplace/types.generated';
+import { GetToken, GetTokens } from '../../lib/daochat-marketplace/documents.generated';
+import { GetTokenQuery, GetTokenQueryVariables, GetTokensQuery, GetTokensQueryVariables, Token as GeneratedToken } from '../../lib/daochat-marketplace/types.generated';
 
 const ENRICH_TIMEOUT = 10000;
 const REQUEST_TIMEOUT = 2500;
