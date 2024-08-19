@@ -1,5 +1,5 @@
 overwrite: true
-schema: ${INDEXER_URL:https://api.studio.thegraph.com/proxy/63193/daochat-marketplace/v.0.02/}
+schema: ${INDEXER_URL:https://api.studio.thegraph.com/proxy/63193/daochat-marketplace/v.0.02}
 config:
   defaultScalarType: unknown
   scalars:
