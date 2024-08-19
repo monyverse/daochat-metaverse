@@ -47,6 +47,7 @@
     "ws": "^8.8.1"
   },
   "devDependencies": {
+    "@graphql-codegen/typescript-resolvers": "^4.2.1",
     "@types/ioredis": "^4.28.1",
     "@types/lru-cache": "^5.1.1",
     "@types/source-map-support": "^0.5.4",
@@ -55,7 +56,7 @@
   },
   "optionalDependencies": {
     "@graphql-codegen/cli": "^5.0.2",
-    "@graphql-codegen/typescript": "^2.3.0",
+    "@graphql-codegen/typescript": "^4.0.9",
     "@graphql-codegen/typescript-document-nodes": "^2.2.0",
     "@graphql-codegen/typescript-operations": "^2.2.0",
     "@typescript-eslint/eslint-plugin": "^5.60.1",

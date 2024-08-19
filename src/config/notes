@@ -1,0 +1,7 @@
+APOLLO_KEY=service:Daochat:in5Xz4yrzgt2bYCxJo35GQ \
+  rover subgraph publish Daochat@current \
+  --schema ./src/lib/daochat-marketplace/schema.graphql \
+  --name daochat-marketplace \
+  --routing-url http://products.prod.svc.cluster.local:4001/graphql
+
+  rover graph check Daochat@current --schema ./src/lib/daochat-marketplace/schema.graphql --log debug
