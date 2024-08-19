@@ -11,6 +11,7 @@
     "start:dev": "ts-node-dev --transpile-only src/bin/app.ts"
   },
   "dependencies": {
+    "@graphprotocol/graph-cli": "^0.80.1",
     "@graphql-tools/schema": "^8.3.1",
     "@graphql-tools/utils": "^8.5.2",
     "@typegoose/typegoose": "^9.2.0",
@@ -24,7 +25,7 @@
     "ethers": "^5.6.9",
     "fastify": "^3.29.0",
     "fastify-plugin": "^3.0.1",
-    "graphql": "^15.7.2",
+    "graphql": "^16.9.0",
     "graphql-parse-resolve-info": "^4.12.0",
     "graphql-redis-subscriptions": "^2.4.0",
     "graphql-request": "^6.1.0",
