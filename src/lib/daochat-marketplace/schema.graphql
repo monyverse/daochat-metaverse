@@ -1,0 +1,83 @@
+enum OrderKind {
+  DIRECT
+  AUCTION
+}
+
+type Order @entity {
+  id: ID!
+
+  contract: Bytes!
+  orderId: BigInt!
+  createdAt: BigInt!
+  transaction: Bytes!
+  updatedAt: BigInt
+  updatedTransaction: Bytes
+
+  kind: OrderKind!
+  open: Boolean!
+  openFrom: BigInt
+  openTo: BigInt
+  maker: Bytes!
+  currency: Currency
+  price: BigInt!
+  token: Token!
+  bidder: Bytes
+  bidAmount: BigInt
+  taker: Bytes
+  paidAmount: BigInt
+
+  bids: [Bid!]! @derivedFrom(field: "order")
+}
+
+type Currency @entity {
+  id: ID!
+
+  name: String
+  symbol: String
+
+  orders: [Order!]! @derivedFrom(field: "currency")
+}
+
+type Bid @entity {
+  id: ID!
+
+  order: Order!
+  createdAt: BigInt!
+  transaction: Bytes!
+
+  bidder: Bytes!
+  bidAmount: BigInt!
+}
+
+type Registry @entity {
+  id: ID!
+  isERC721: Boolean!
+
+  tokens: [Token!]! @derivedFrom(field: "registry")
+}
+
+type Token @entity {
+  id: ID!
+
+  registry: Registry!
+  contract: Bytes!
+  tokenId: BigInt!
+
+  createdAt: BigInt
+  createdBlock: BigInt
+  creator: Bytes
+  owner: Bytes
+
+  orders: [Order!]! @derivedFrom(field: "token")
+  transfers: [Transfer!]! @derivedFrom(field: "token")
+}
+
+type Transfer @entity {
+  id: ID!
+  createdAt: BigInt!
+  transaction: Bytes!
+
+  from: Bytes!
+  to: Bytes!
+  token: Token!
+}
